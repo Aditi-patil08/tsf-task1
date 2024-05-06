@@ -68,6 +68,8 @@ Error: package or namespace load failed for ‘Matrix’ in stopifnot(length(cla
 23   3.8     35
 24   6.9     76
 25   7.8     86
+>
+> 
 > #summary of data
 > summary(data)
      Hours           Scores     
@@ -76,9 +78,13 @@ Error: package or namespace load failed for ‘Matrix’ in stopifnot(length(cla
  Median :4.800   Median :47.00  
  Mean   :5.012   Mean   :51.48  
  3rd Qu.:7.400   3rd Qu.:75.00  
- Max.   :9.200   Max.   :95.00  
+ Max.   :9.200   Max.   :95.00
+>
+> 
 > x=data$Hours
 > y=data$Scores
+>
+> 
 > #fitting model
 > model=lm(y~x)
 > model
@@ -94,10 +100,18 @@ Coefficients:
 > plot(x,y,main="Hours vs Scores",xlab="Hours studied",ylab="score",col="red")
 > abline(model,col="blue")
 > http://127.0.0.1:10601/graphics/7427117d-fbfc-4890-9dd1-be079380fa3e.png
+>
+> 
 > #comparing actual and predicted scores
 > actual=y
+>
+> 
 > hour=data.frame(x)
+>
+> 
 > predicted=predict(model,hour)
+>
+> 
 > cbind(actual,predicted)
    actual predicted
 1      21  26.92318
@@ -125,8 +139,12 @@ Coefficients:
 23     35  39.63173
 24     76  69.93672
 25     86  78.73494
+>
+> 
 > #predicted score if student studied for 9.25hrs/day
 > test=data.frame(x=9.25)
+>
+> 
 > predict(model,test)
        1 
 92.90985 
