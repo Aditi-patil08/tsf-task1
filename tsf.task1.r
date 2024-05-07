@@ -55,6 +55,7 @@ Coefficients:
 > #plotting the model
 > plot(x,y,main="Hours vs Scores",xlab="Hours studied",ylab="score",col="red")
 > abline(model,col="blue")
+Rplot.png
 > #comparing actual and predicted scores
 > actual=y
 > hour=data.frame(x)
